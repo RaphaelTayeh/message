@@ -158,7 +158,7 @@ display: none;
   background: #ff3b7a;
   position:absolute
   right:20px;
-  bottom:20px;
+  bottom:0px;
   color: white;
   box-shadow: 0 10px 24px rgba(0,0,0,.14);
 }
@@ -276,6 +276,21 @@ display: none;
 
     <section class="result" id="result">
       <h2>LESSGOOOOOO!!!</h2>
+	  <button id="whatsappBtn" style="
+  margin-top: 20px;
+  padding: 18px 28px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #25D366;
+  color: white;
+  box-shadow: 0 10px 24px rgba(0,0,0,.14);
+">
+  Message me on WhatsApp 💬
+</button>
+
       <img
         class="fireworks"
         src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDBmMjh1ZGVzb2VkMHA4dGhlYmN3c3VsMDBtY2x3bWZ1MHJ4MzZneSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/maJfaPl0JNswFJvfoR/giphy.gif"
@@ -402,6 +417,12 @@ document.querySelectorAll(".next").forEach(btn => {
     steps[currentStep].classList.add("active");
   });
 });
+document.getElementById("whatsappBtn")?.addEventListener("click", () => {
+  const phone = "96181369469"; // 🔴 REPLACE WITH YOUR NUMBER
+  const message = encodeURIComponent("Yes <3");
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+});
+
 
   </script>
 </body>
